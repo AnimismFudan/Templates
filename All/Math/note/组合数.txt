@@ -1,0 +1,13 @@
+//都挺显然的
+sigma(C(i,m)) = C(n+1,m+1)  m<=i<=n
+sigma(C(i,k)) = C(n+m+1,k+1)-C(n,k+1)	n<=i<=n+m
+sigma(C(n,i)*C(m,p-i)) = C(n+m,p) 0<=i<=p
+sigma(k*C(n,k)) = n*2^(n-1) 1<=k<=n
+
+lucas定理：
+C(n,m) = C(n/p,m/p)*C(n%p,m%p) (%P)
+
+
+二项式反演：
+f(n) = ∑(C(n,k)*g(k))  0<=k<=n
+g(n) = ∑((-1)^(n-k)*C(n,k)*g(k))  0<=k<=n

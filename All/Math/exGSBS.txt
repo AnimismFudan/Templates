@@ -1,0 +1,23 @@
+	A^B≡C (mod P)
+→ 	A/t * A^(B-1)≡C/t (mod P/t)
+	使t=gcd(A,P) until t=1;
+	
+	若C mod t≠0 则判无解
+	
+	根据欧拉定理 A ^ phi(P)≡1 (mod P)(当gcd(A,P)=1时)
+	所以能求得逆元
+
+	粗略的证明:
+	设D=A^B
+	若D≡C (mod P)
+	∴D=k*P+C (k∈Z)
+	∴D/t=k*(P/t)+C/t
+	即D/t≡C/t (mod P/t)
+	反推也一样
+	
+	·但这样还是会有反例
+	设我们消了k次t，那么我们得到的式子为
+	设L=t1*t2*t3...tk
+	((A ^ k) / L) * (A ^ (B - k)) ≡ C / L (mod P/L)
+	用普通BSGS求出（B-k） ，但这时求出的B一定≥k，会漏解
+	解决方法显然，k≤log P，只要先暴力验证较小范围内的数就行了

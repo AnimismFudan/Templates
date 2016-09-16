@@ -1,0 +1,15 @@
+线性规划问题
+标准型：
+	最大化
+		sigma(Cj * Xj)			1 <= j <= N
+	满足约束
+		sigma(Aij * Xj) <= Bi	1 <= i <= M
+		Xj >= 0					1 <= j <= N
+
+对偶问题：
+	最小化
+		sigma(Bi * Yi)			1 <= i <= M
+	满足约束
+		sigma(Aij * Yi) >= Cj	1 <= j <= N
+		Yi >= 0	1 <= i <= M
+		
