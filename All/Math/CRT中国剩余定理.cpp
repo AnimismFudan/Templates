@@ -1,5 +1,5 @@
 //有同余方程组x=ai(%mi)
-//要求mi两两互质
+//这个板子mi不互质也可以用
 //设M=m1*m2*…*mn, Mi=M/mi
 //ti=Mi^(-1) (%mi意义下的逆元)
 //通解x=sigma(ai*ti*Mi)+k*M
